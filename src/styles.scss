@@ -1,1 +1,175 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --white: #f7f7f7;
+    --yellow: #fbdd8e;
+    --blue: #212529;
+    --bluelight: rgb(104, 207, 211);
+    --gray: #eeeeee;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/* Animaciones */
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.text {
+    color: var(--gray);
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+.nav-link {
+    &:hover{
+        color: var(--yellow) !important;
+    }
+}
+
+.active {
+    color: var(--yellow) !important;
+}
+
+.brand {
+    width: 5rem;
+}
+
+/* HEADER */
+.hero {
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    &__span {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--yellow);
+    }
+
+    &__link {
+        color: var(--white);
+        transition: color .1s;
+
+        &:hover {
+            color: var(--bluelight);
+        }
+    }
+
+    &__text {
+        max-width: 600px;
+        color: var(--gray);
+
+        &-span {
+            width: 90%;
+        }
+    }
+}
+
+/* MAIN CONTENT */
+.main {
+    &__title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+}
+
+.projects {
+    &__item {
+        margin-bottom: 2rem;
+    }
+
+    &__image {
+        border-radius: 8px;
+    }
+
+    &__title {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    &__text {
+        color: var(--gray);
+    }
+
+    &__link {
+        font-size: .9rem;
+        font-weight: 600;
+        display: inline-block;
+        margin-right: auto;
+        color: var(--yellow);
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--yellow);
+            transform-origin: left;
+            transform: scale(0);
+            transition: transform .25s;
+        }
+
+        &:hover {
+            color: var(--yellow);
+
+            &::after {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+/* FOOTER */
+.footer {
+    &__text {
+        font-size: .9rem;
+        color: var(--gray);
+    }
+}
