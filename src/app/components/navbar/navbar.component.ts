@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // TODO: esto es una prueba para @MatiasMonasterio con el issue #1
   }
 
 }
