@@ -12,6 +12,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     // TODO: esto es una prueba para @MatiasMonasterio con el issue #1
+    // TODO: nueva mensaje para @MatiasMonasterio #3
   }
 
 }
