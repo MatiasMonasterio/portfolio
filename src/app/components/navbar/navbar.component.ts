@@ -11,6 +11,11 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    // como que no
+    const prueba = 'mensaje';
+    console.log( prueba );
+    console.log('Listo');
   }
 
 }
